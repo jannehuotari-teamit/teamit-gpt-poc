@@ -28,7 +28,7 @@ export const tokenRequest = {
 
 export const apiConfig = {
   uri: `${process.env.GRAPH_ENDPOINT}/v1.0/sites/${process.env.SITE_ID}/drive/root:/AI tools/TEAMIT-AI-POC-TESTIKANSIO:/children`,
-  test: `${process.env.GRAPH_ENDPOINT}/v1.0/sites/${process.env.SITE_ID}/drive/root:/AI tools/TEAMIT-AI-POC-TESTIKANSIO:/children`
+  test: `${process.env.GRAPH_ENDPOINT}/v1.0/sites/oyteamit.sharepoint.com:/sites/TeamTeamit/SitePages/Henkil%C3%B6st%C3%B6opas.aspx`
 };
 
 /**

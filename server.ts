@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import { WebPDFLoader } from 'langchain/document_loaders/web/pdf';
+import { CheerioWebBaseLoader } from 'langchain/document_loaders/web/cheerio';
 
 import { chat } from './bot';
 import { apiConfig, getToken, tokenRequest } from './auth';
@@ -67,15 +68,15 @@ app.post('/question', async (req, res) => {
 });
 
 /** Test api call to sharepoint though Microsoft Graph Api */
-app.get('/getFile', async (req, res) => {
+app.get('/test', async (req, res) => {
   try {
     const file = await getFile(true);
     res.send(file);
   } catch (err) {
     if (err instanceof Error) {
-      console.log(err.message);
-    } else {
       console.log('Unexpected error', err);
+    } else {
+      console.log('Unexpected error', err.response.data);
     }
     res.sendStatus(500);
   }
